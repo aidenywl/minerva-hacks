@@ -21,9 +21,9 @@ def main():
     )
 
     my_cursor = my_db.cursor()
-    command = """SELECT * FROM geodata WHERE client_id='%s' ORDER BY unix_time DESC""" % (client_id,)
+    command = """SELECT * FROM intercepts WHERE client_id='%s' ORDER BY unix_time DESC""" % (client_id,)
     my_cursor.execute(command)
-    geo_points = my_cursor.fetchall()
+    intercepts = my_cursor.fetchall()
 
     latitude_list = []
     longitude_list = []
@@ -31,21 +31,21 @@ def main():
     average_latitude = 0
     average_longitude = 0
 
-    for geo_point in geo_points:
-        latitude_list.append(float(geo_point[2]))
-        longitude_list.append(float(geo_point[3]))
-        average_latitude += float(geo_point[2])
-        average_longitude += float(geo_point[3])
+    for intercept in intercepts:
+        latitude_list.append(float(intercept[3]))
+        longitude_list.append(float(intercept[4]))
+        average_latitude += float(intercept[3])
+        average_longitude += float(intercept[4])
 
     average_latitude = average_latitude/len(latitude_list)
     average_longitude = average_longitude/len(longitude_list)
 
-    google_map = gmplot.GoogleMapPlotter(average_latitude, average_longitude, 18)
+    google_map = gmplot.GoogleMapPlotter(average_latitude, average_longitude, 13)
     google_map.apikey = api_key
 
-    google_map.scatter(latitude_list, longitude_list, '#FF0000', size=5, marker=False)
+    google_map.scatter(latitude_list, longitude_list, '#FF0000', size=100, marker=True)
 
-    google_map.plot(latitude_list, longitude_list, 'red', edge_width=2.5)
+    google_map.plot(latitude_list, longitude_list, 'cornflowerblue', edge_width=2.5)
 
     google_map.draw(html_file)
     os.system("open " + html_file)
