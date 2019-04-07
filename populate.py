@@ -42,6 +42,10 @@ latitude = None
 longitude = None
 unix_time = 0
 
+# Clean current data
+my_cursor.execute("DELETE FROM geodata")
+my_cursor.execute("DELETE FROM intercepts")
+
 for index, elem in enumerate(la):
     add_interceptor_command = "INSERT INTO geodata (client_id, latitude, longitude, unix_time) VALUES (%s, %s, %s, %s)"
     add_interceptor_command_variables = (client_id, lo[index], elem, unix_time)
