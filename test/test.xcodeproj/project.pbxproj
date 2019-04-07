@@ -15,6 +15,7 @@
 		BE7CF38022597B4B00192694 /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7CF37F22597B4B00192694 /* testTests.swift */; };
 		BE7CF38B22597B4B00192694 /* testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7CF38A22597B4B00192694 /* testUITests.swift */; };
 		BE7CF3992259825100192694 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7CF3982259825100192694 /* SecondViewController.swift */; };
+		FAD30810225A25F900BBB3C4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD3080F225A25F900BBB3C4 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BE7CF38A22597B4B00192694 /* testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITests.swift; sourceTree = "<group>"; };
 		BE7CF38C22597B4B00192694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE7CF3982259825100192694 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		FAD3080F225A25F900BBB3C4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		BE7CF35E22597B4A00192694 = {
 			isa = PBXGroup;
 			children = (
+				FAD3080F225A25F900BBB3C4 /* Default-568h@2x.png */,
 				BE7CF36922597B4A00192694 /* test */,
 				BE7CF37E22597B4B00192694 /* testTests */,
 				BE7CF38922597B4B00192694 /* testUITests */,
@@ -196,6 +199,7 @@
 				TargetAttributes = {
 					BE7CF36622597B4A00192694 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 					BE7CF37A22597B4B00192694 = {
 						CreatedOnToolsVersion = 10.2;
@@ -233,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE7CF37522597B4B00192694 /* LaunchScreen.storyboard in Resources */,
+				FAD30810225A25F900BBB3C4 /* Default-568h@2x.png in Resources */,
 				BE7CF37222597B4B00192694 /* Assets.xcassets in Resources */,
 				BE7CF37022597B4A00192694 /* Main.storyboard in Resources */,
 			);

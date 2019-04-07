@@ -7,22 +7,31 @@
 //
 
 import UIKit
+var ID: String = "-1"
 
 class TestViewController: UIViewController {
-    @IBOutlet weak var myLabel: UILabel!
-    
-    var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func pressSomeButton(_ sender: UIButton) {
-        print(sender.titleLabel!.text)
+    func setID(id: String) {
+        // set ID
+        ID = id
+        print(ID)
         
-        count += 1
-        myLabel.text = "count \(count)"
     }
+    
+    @IBAction func pressSomeButton(_ sender: UIButton) {
+        let idURL = URL(string: "https://53d48747.ngrok.io/get_id")!
+        let task = URLSession.shared.dataTask(with: idURL){(data, response, error) in
+            if (error == nil) {
+                let loadedID = String(bytes: data!, encoding: .utf8)!
+                self.setID(id: loadedID)
+            }
+        }
+        task.resume()
 
+    }
 }
