@@ -76,13 +76,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ID: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gV3-lv-mgh">
-                                <rect key="frame" x="182" y="158" width="51" height="44"/>
+                                <rect key="frame" x="0.0" y="158" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.2901960784" green="0.55294117649999996" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2019-04-07 at 6.43.26 AM" translatesAutoresizingMaskIntoConstraints="NO" id="xyj-1H-L7W">
+                                <rect key="frame" x="87" y="308" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dMv-nv-XoH"/>
@@ -99,5 +103,6 @@
     <resources>
         <image name="IMAGE 2019-04-07 02:52:34" width="750" height="557"/>
         <image name="IMAGE 2019-04-07 03:00:44" width="1244" height="535"/>
+        <image name="Screen Shot 2019-04-07 at 6.43.26 AM" width="534" height="828"/>
     </resources>
 </document>
