@@ -31,13 +31,13 @@ def main():
     # sum1 = 0;
     # sum2 = 0;
     for intercept in intercepts:
-        latitude_list.append(intercept[3])
-        longitude_list.append(intercept[4])
+        latitude_list.append(float(intercept[3]))
+        longitude_list.append(float(intercept[4]))
 
     google_map = gmplot.GoogleMapPlotter(30.3164945, 78.03219179999999, 13)
     google_map.apikey = api_key
 
-    google_map.scatter([30.3358376, 30.307977, 30.3216419], [77.8701919, 78.048457, 78.0413095], '#FF0000', size=100, marker=True)
+    google_map.scatter(latitude_list, longitude_list, '#FF0000', size=100, marker=True)
 
     google_map.draw(html_file)
     os.system("open " + html_file)
