@@ -7,15 +7,21 @@
 //
 
 import UIKit
+import CoreLocation
 
-class SecondViewController: UIViewController {
+
+class SecondViewController: UIViewController, CLLocationManagerDelegate{
     
+    @IBOutlet weak var idLabel: UILabel!
     var timer: Timer!
+    var locationManager: CLLocationManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         locationTrackerWithTimer()
+        locationManager = CLLocationManager()
+        locationManager.requestAlwaysAuthorization()
     }
     
     func locationTrackerWithTimer() {
